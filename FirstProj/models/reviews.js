@@ -12,7 +12,7 @@ const reviewSchema = new Schema({
     type: Date,
     default: Date.now(),
   },
-  review: {
+  comment: {
     type: String,
     required: true,
   },
