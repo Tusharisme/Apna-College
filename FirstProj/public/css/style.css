@@ -96,17 +96,21 @@ body {
   border: none !important;
 }
 
-
 /* show image */
-.show-img{
+.show-img {
   height: 30vh;
-
 }
 
-.btns{
+.btns {
   display: flex;
 }
-.show-card{
+.show-card {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* map */
+#map {
+  height: 300px;
+  width: 100%;
 }
