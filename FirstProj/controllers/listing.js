@@ -21,6 +21,13 @@ module.exports.showListing = async (req, res) => {
     req.flash("error", "Cannot find that listing!");
     res.redirect("/listings");
   }
+  let response = await geocodingClient
+    .forwardGeocode({
+      query: listing.location,
+      limit: 1,
+    })
+    .send();
+  listing.geometry = response.body.features[0].geometry;
   res.render("listings/show.ejs", { listing });
 };
 
